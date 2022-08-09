@@ -17,19 +17,20 @@
 
 // 4)
 // What will the code below output to the console and why?
-// var myObject = {
-// name: "Adalab",
-// func: function() {
-// var self = this;
-// console.log("outer func: this.name = " + this.name);
-// console.log("outer func: self.name = " + self.name);
-// (function() {
-// console.log("inner func: this.name = " + this.name);
-// console.log("inner func: self.name = " + self.name);
-// }());
-// }
-// };
-// myObject.func();
+var myObject = {
+name: "Adalab",
+func: function() {
+var self = this;
+console.log("outer func: this.name = " + this.name);
+console.log("outer func: self.name = " + self.name);
+(function() {
+console.log("inner func: this.name = " + this.name);
+console.log("inner func: self.name = " + self.name);
+}());
+}
+};
+myObject.func();
+
 
 var myIndex = 0;
 carousel();
