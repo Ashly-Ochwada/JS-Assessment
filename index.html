@@ -14,6 +14,7 @@
         <!-- Slide Show -->
         <section>
             <img class="mySlides" src="https://nairobinews.nation.co.ke/wp-content/uploads/2019/09/Sauti-Sol.jpg" style="width:100%">
+            <img class="mySlides" src="https://i2.wp.com/www.soundsofafrica.org/wp-content/uploads/2020/07/sauti-sol-2.jpg?fit=1200%2C1200&ssl=1" style="width:100%">
             <img class="mySlides" src="http://ocdn.eu/images/pulscms/NTE7MDA_/30b2539286250f255f865326b5d72f7e.png" style="width:100%">
         </section>
 
@@ -27,46 +28,27 @@
         <script src="test.js"></script>
 
     </body>
-<p>Company Name: <input type="text"
-        size="30" name="Company Name" /></p>
 
-<br />
-
-
-<p>Phone Number <input type="text"
-    size="30" name="Phone Number" /></p>
-
-<br />
-<p>Location<input type="text"
-size="30" name="Location" /></p>
-
-<br />     
-<p>Booking Dates<input type="calendar"
-size="30" name="Booking Dates" /></p>
-
-<br />       
-
-
-
-<p>
 <input type="submit" value="Submit" name="Submit" />
 </p>
+<script>
+var myIndex = 0;
+carousel();
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
 
-        <!-- <script>
-            // Automatic Slideshow - change image every 3 seconds
-            var myIndex = 0;
-            carousel();
-            function carousel() {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
-                }
-                myIndex++;
-                if (myIndex > x.length) {myIndex = 1}
-                x[myIndex-1].style.display = "block";}
-        </script>
-             -->
+</script>
+</body>
+</html>
 
   
 
